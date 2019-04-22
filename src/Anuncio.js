@@ -21,7 +21,11 @@ class Anuncio extends Component {
     const anuncio = this.state.anuncio;
 
     if (this.state.isLoading) {
-      return <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw" />;
+      return (
+        <p className="loading">
+          <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw" />
+        </p>
+      );
     }
 
     return (

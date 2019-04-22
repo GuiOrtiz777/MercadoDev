@@ -40,19 +40,23 @@ class Categoria extends Component {
   render() {
     return (
       <div>
-        <div className="row">
+        <div className="">
           <h1>Categoria:</h1>
-          {this.state.isLoading && (
-            <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw" />
-          )}
-          {!this.state.isLoading &&
-            Object.keys(this.state.anuncios).length === 0 && (
-              <p>Nenhum produto cadastrado</p>
+          <div className="row">
+            {this.state.isLoading && (
+              <p className="loading">
+                <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw" />
+              </p>
             )}
-          {Object.keys(this.state.anuncios).map(key => {
-            const anuncio = this.state.anuncios[key];
-            return <AnuncioHome anuncio={anuncio} id={key} key={key} />;
-          })}
+            {!this.state.isLoading &&
+              Object.keys(this.state.anuncios).length === 0 && (
+                <p>Nenhum produto cadastrado</p>
+              )}
+            {Object.keys(this.state.anuncios).map(key => {
+              const anuncio = this.state.anuncios[key];
+              return <AnuncioHome anuncio={anuncio} id={key} key={key} />;
+            })}
+          </div>
         </div>
       </div>
     );

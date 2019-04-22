@@ -13,6 +13,13 @@ code {
     monospace;
 }
 
+.loading {
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+}
+
 .fa {
   display: block;
   margin: 10px auto;
